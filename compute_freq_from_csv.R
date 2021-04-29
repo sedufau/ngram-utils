@@ -171,16 +171,25 @@ p1 <- hist(log10(df$MEAN_BIGRAM_occurrences_nonpositional), breaks=100, border=F
 p2 <- hist(log10(df$MEAN_BIGRAM_occurrences_positional), breaks=100, border=F)  
 plot( p1, col=rgb(0,0,1,0.3), xlim=c(0,10))  # first histogram
 plot( p2, col=rgb(1,0,0,0.3), xlim=c(0,10), add=T)  # second
-legend("topright", c("Occ NonPositional", "OccPositional"), fill=c(rgb(0,0,1,0.3), rgb(1,0,0,0.3)))
+legend("topleft", c("Occ NonPositional", "OccPositional"), fill=c(rgb(0,0,1,0.3), rgb(1,0,0,0.3)))
 
 
 # plot log10 fpm
 par(mfrow=c(1,1))
 p1 <- hist(log10(df$MEAN_BIGRAM_fpm_nonpositional), breaks=100, border=FALSE)  
 p2 <- hist(log10(df$MEAN_BIGRAM_fpm_positional), breaks=100, border=FALSE)  
-plot( p1, col=rgb(0,0,1,0.3), xlim=c(-5,6))  # first histogram
-plot( p2, col=rgb(1,0,0,0.3), xlim=c(-5,6), add=T)  # second
-legend("topright", c("Occ NonPositional", "OccPositional"), fill=c(rgb(0,0,1,0.3), rgb(1,0,0,0.3)))
+plot( p1, col=rgb(0,0,1,0.3), xlim=c(-5,6), 
+      main = "Histogram of log10 FPM",
+      xlab = "log10(fpm)")  # first histogram
+plot( p2, col=rgb(1,0,0,0.3), xlim=c(-5,6), add=T, 
+      main = "Histogram of log10 FPM",
+      xlab = "log10(fpm)")  # second
+legend("topleft", c("Occurrences NonPositional", "Occurrence Positional"), fill=c(rgb(0,0,1,0.3), rgb(1,0,0,0.3)))
+
+
+#
+plot(log10(df$MEAN_BIGRAM_fpm_nonpositional), log10(df$MEAN_BIGRAM_fpm_positional))
+
 
 
 # all seem OK, write
