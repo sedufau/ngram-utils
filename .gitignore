@@ -36,7 +36,7 @@ vignettes/*.pdf
 rsconnect/
 
 # Folder containing raw data
-rawdata/
+data/
 
 # Prerequisites
 *.d
