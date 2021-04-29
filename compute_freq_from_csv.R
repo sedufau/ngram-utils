@@ -24,7 +24,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(tidyverse)
 
 # read 4GRAM ENGLISH
-df <- read_tsv("~/Downloads/NGRAM_all_ENG_4_SFI.csv.gz")
+df <- read_tsv("~/data/NGRAM_all_ENG_4_SFI.csv.gz")
 
 
 
