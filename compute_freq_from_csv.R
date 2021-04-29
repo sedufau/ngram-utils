@@ -184,7 +184,7 @@ legend("topright", c("Occ NonPositional", "OccPositional"), fill=c(rgb(0,0,1,0.3
 
 
 # all seem OK, write
-write.csv(df, file=gzfile("ENG_4_withPOSfreq_withBIGRAMfreq.csv"))
+write.csv(df, file=gzfile("ENG_4_withPOSfreq_withBIGRAMfreq.csv.gz"))
 
 
 
